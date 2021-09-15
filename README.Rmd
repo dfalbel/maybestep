@@ -66,7 +66,7 @@ wflow <- workflow() %>%
 
 grid <- grid_regular(
   sqrt = use_step(),
-  neighbors(),
+  neighbors(c(1, 20)),
   levels = 10
 )
 

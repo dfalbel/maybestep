@@ -56,8 +56,8 @@ wflow <- workflow() %>%
 
 grid <- grid_regular(
   sqrt = use_step(),
-  neighbors(),
-  levels = 5
+  neighbors(c(1, 20)),
+  levels = 10
 )
 
 res <- tune_grid(
@@ -70,3 +70,6 @@ autoplot(res)
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
+
+We can see that taking the square root of the numeric predictors had a
+strong effect in the model results.
