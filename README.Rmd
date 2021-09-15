@@ -59,7 +59,8 @@ model <- nearest_neighbor(neighbors = tune()) %>%
   set_mode("regression")
 
 rec <- recipe(compressive_strength ~ ., data = concrete) %>%
-    step_maybe(step_sqrt, all_numeric_predictors(), use = tune("sqrt"))
+  step_maybe(step_sqrt, all_numeric_predictors(), use = tune("sqrt")) %>% 
+  step_normalize(all_numeric_predictors())
 
 wflow <- workflow() %>% 
   add_recipe(rec) %>% 
