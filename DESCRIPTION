@@ -21,7 +21,8 @@ Imports:
     tune
 Suggests: 
     testthat (>= 3.0.0),
-    tidymodels
+    tidymodels,
+    glmnet
 Remotes:
     dfalbel/tune@feature/merge-step
 Config/testthat/edition: 3
