@@ -17,7 +17,9 @@ RoxygenNote: 7.1.1
 Imports: 
     dials,
     magrittr,
-    recipes
+    recipes,
+    tune
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    tidymodels
 Config/testthat/edition: 3

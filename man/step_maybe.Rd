@@ -2,7 +2,7 @@
 % Please edit documentation in R/maybestep.R
 \name{step_maybe}
 \alias{step_maybe}
-\title{Allows tuning the existance of a step.}
+\title{Allows tuning the presence of a step.}
 \usage{
 step_maybe(
   recipe,
@@ -37,5 +37,13 @@ the computations for subsequent operations}
 \item{id}{A character string that is unique to this step to identify it.}
 }
 \description{
-Allows tuning the existance of a step.
+Allows tuning the presence of a step.
+}
+\examples{
+df <- data.frame(x = letters[1:4], y = runif(length(letters[1:4])))
+rec <- recipe(y ~ x, data = df) \%>\%
+  step_maybe(step_dummy, use = TRUE, all_nominal_predictors())
+
+rec \%>\% prep() \%>\% bake(df)
+
 }

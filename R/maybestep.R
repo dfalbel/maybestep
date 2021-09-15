@@ -1,10 +1,17 @@
-#' Allows tuning the existance of a step.
+#' Allows tuning the presence of a step.
 #'
 #' @inheritParams recipes::step_normalize
 #' @param step_fn A recipe step function that will be added to `recipe`.
 #' @param ... Additional arguments passed to `step_fn`.
 #' @param use Whether to include `step_fn` or not into the `recipe`.
 #'
+#'
+#' @examples
+#' df <- data.frame(x = letters[1:4], y = runif(length(letters[1:4])))
+#' rec <- recipe(y ~ x, data = df) %>%
+#'   step_maybe(step_dummy, use = TRUE, all_nominal_predictors())
+#'
+#' rec %>% prep() %>% bake(df)
 #'
 #' @importFrom recipes bake prep add_step step rand_id tunable
 #' @importFrom tune tune_args
