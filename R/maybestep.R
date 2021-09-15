@@ -7,6 +7,7 @@
 #'
 #'
 #' @examples
+#' library(recipes)
 #' df <- data.frame(x = letters[1:4], y = runif(length(letters[1:4])))
 #' rec <- recipe(y ~ x, data = df) %>%
 #'   step_maybe(step_dummy, use = TRUE, all_nominal_predictors())
