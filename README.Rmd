@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/dfalbel/maybestep/workflows/R-CMD-check/badge.svg)](https://github.com/dfalbel/maybestep/actions)
 <!-- badges: end -->
 
 maybestep is a [recipes](https://recipes.tidymodels.org) extension provinding `step_maybe` that allows users to easily tune the presence of a step in a tidymodels workflow.

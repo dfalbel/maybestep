@@ -4,6 +4,8 @@
 # maybestep
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/dfalbel/maybestep/workflows/R-CMD-check/badge.svg)](https://github.com/dfalbel/maybestep/actions)
 <!-- badges: end -->
 
 maybestep is a [recipes](https://recipes.tidymodels.org) extension
