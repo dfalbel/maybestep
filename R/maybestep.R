@@ -83,6 +83,9 @@ tunable.step_maybe <- function(x, ...) {
   )
 }
 
+#' A dials parameter to be used with [step_maybe()].
+#' @param values the possible values (TRUE or FALSE by default.)
+#' @seealso [step_maybe()]
 #' @export
 use_step <- function(values = c(FALSE, TRUE)) {
   dials::new_qual_param(
@@ -101,7 +104,7 @@ tune_args.step_maybe <- function(object, full = FALSE, ...) {
 }
 
 #' @export
-merge.step_maybe <- function(object, ...) {
-  object$step <- merge(object$step, ...)
+merge.step_maybe <- function(x, y, ...) {
+  x$step <- merge(x$step, y, ...)
   NextMethod()
 }
