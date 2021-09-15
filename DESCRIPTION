@@ -22,4 +22,6 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0),
     tidymodels
+Remotes:
+    dfalbel/tune@feature/merge-step
 Config/testthat/edition: 3
